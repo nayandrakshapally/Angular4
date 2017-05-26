@@ -1,0 +1,22 @@
+
+  <div class="well well-lg">
+  <div class="row">
+  <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="/w3images/lights.jpg">
+          <img [src]="productDetails.thumbnailImage" alt="" style="width:100%">
+          <div class="caption">
+            <p>  {{productDetails.modelNumber}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+<div class="col-sm-8 description" >
+    {{productDetails.description}}
+</div>
+</div>
+<div>
+  <td><button class="btn btn-primary" (click)="addProductToKart(item)">ADD TO CART</button> </td>
+
+</div>
+  </div>

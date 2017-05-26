@@ -1,0 +1,58 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{AppName}}</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <!--<li>
+          <a href="#" (click)="loadHome()">HOME </a>
+          </li>
+        <li>
+          <a href="#" (click)="loadRegister()">REGISTER</a>
+          </li>
+          <li>
+            <a href="#" (click)="loadProducts()">PRODUCTS</a>
+          </li>
+           <li>
+            <a href="#" (click)="loadOrders()">CART{{cartItems.length}}</a>
+          </li>-->
+           <li>
+                 <a [routerLink]="['/home']">Home</a>
+             </li>
+              <li>
+                 <a [routerLink]="['/register']">Register</a>
+             </li>
+              <li>
+                 <a [routerLink]="['/products']">Products</a>
+             </li>
+                <li>
+                    <a href="#">Cart {{cartItems.length}}</a>
+                </li>
+        </ul>
+     
+     
+    </div>
+  </div>
+</nav>
+<!--<div *ngIf="viewName=='home'">
+  <custom-home></custom-home>
+</div>
+<div *ngIf="viewName=='register'">
+  <custom-register></custom-register>
+</div>
+<div *ngIf="viewName=='Products'">
+    <app-product></app-product>
+    <custom-order></custom-order>
+</div>
+<div *ngIf="viewName=='Orders'">
+   <custom-order></custom-order>
+</div>-->
+<router-outlet></router-outlet>

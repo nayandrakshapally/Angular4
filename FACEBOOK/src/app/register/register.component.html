@@ -1,0 +1,40 @@
+<div class="form-horizontal">
+<div class="form-group">
+      <label  class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-2">
+        <input type="text" class="form-control" [(ngModel)]="user.email" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">PASSWORD</label>
+      <div class="col-lg-2">
+        <input type="text" class="form-control" [(ngModel)]="user.password" placeholder="PASSWORD">
+      </div>
+    </div>
+     <div class="form-group">
+        <label for="firstName" class="col-lg-2 control-label">First Name</label>
+        <div class="col-lg-2">
+            <input type="text" class="form-control"
+            appAlphabetsOnly [lengthOfName]="LengthOfFirstName"
+             [(ngModel)]="user.firstName" placeholder="First Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Date Of Birth</label>
+        <div class="col-lg-4">
+            <material-datepicker [(date)]="user.DateOfBirth"></material-datepicker>
+        </div>
+    </div>
+     <div class="form-group">
+        <label for="Age" class="col-lg-2 control-label">Age</label>
+        <div class="col-lg-2">
+            <input type="text" class="form-control"
+            appNumbersonly [maxLength]="LengthOfAge"
+            [(ngModel)]="user.age" placeholder="Age">
+        </div>
+    <div class="col-lg-4 col-lg-offset-2">
+        <button class="btn btn-primary"  (click)="registerUser()">Register</button>
+    </div>
+</div>
+
+
